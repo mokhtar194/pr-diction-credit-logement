@@ -246,7 +246,7 @@ def Lab21_Otmani_Idrissi():
                         st.divider()
                         list_col = []
 
-    st.button("Re-run")
+        st.button("Re-run")
 
 
 
