@@ -21,8 +21,12 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import streamlit as st
+from streamlit.hello.utils import show_code
 from io import StringIO
 
+
+def Lab21_Otmani_Idrissi():
+    
 # Step 1 : DATASET
 dt = pd.read_csv("datasets/train.csv")
 print(dt.head())
@@ -240,3 +244,20 @@ if st.sidebar.button('Predict Group'):
                     st.write("Prediction :  ", list_col[3]['Prediction'])
                 st.divider()
                 list_col = []
+
+    st.button("Re-run")
+
+
+
+st.set_page_config(page_title="Lab21_Otmani_Idrissi", page_icon="📹")
+st.markdown("# Lab21_Otmani_Idrissi")
+st.sidebar.header("Lab21_Otmani_Idrissi")
+st.write(
+    """This app shows how you can use Streamlit to build cool animations.
+It displays an animated fractal based on the the Julia Set. Use the slider
+to tune different parameters."""
+)
+
+Lab21_Otmani_Idrissi()
+
+show_code(Lab21_Otmani_Idrissi)
